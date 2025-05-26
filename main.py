@@ -11,6 +11,9 @@ openai.api_key = os.getenv("OPENAI_API_KEY")
 
 app = FastAPI()
 
+
+# minor fix to trigger git change
+
 # 👇  сюда свой фронтенд-домен
 origins = [
     "https://ai-instagram-helper-git-main-ihor555s-projects.vercel.app",
