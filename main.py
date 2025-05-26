@@ -11,7 +11,7 @@ openai.api_key = os.getenv("OPENAI_API_KEY")
 
 app = FastAPI()
 
-# 👇 Добавьте сюда свой фронтенд-домен
+# 👇  сюда свой фронтенд-домен
 origins = [
     "https://ai-instagram-helper-git-main-ihor555s-projects.vercel.app",
     "http://localhost:3000",  # на случай локальной отладки
@@ -53,7 +53,7 @@ async def analyze_image(image: UploadFile = File(...)) -> Dict[str, str]:
         result = response.choices[0].message.content
         return {
             "caption": result,
-            "hashtags": ""  # можно выделить отдельно
+            "hashtags": ""  # выделить отдельно
         }
 
     except Exception as e:
